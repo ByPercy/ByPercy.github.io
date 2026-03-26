@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio-Wed</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/QueryCel.css" />
+    <link rel="stylesheet" href="styles/QueryPC1.css" />
+
+    <script src="Scripts/app-escritorio.js"></script>
+    <script src="Scripts/movimiento.js"></script>
+    <script src="Scripts/Proteccion.js"></script>
+    <script src="Scripts/Seleccion.js"></script>
+  </head>
+  <body>
+    <!---->
+    <div></div>
+
+    <!--AQUI VAN LOS APP DE ESCRITORIO-->
+    <div class="app-escritorio" id="app-texto">
+      <figure class="open-windows">
+        <img src="icons/directory_closed-3.png" title="ingresa aqui ahora" />
+        <figcaption>Portafolio</figcaption>
+      </figure>
+
+      <figure class="icon-container">
+        <img src="icons/regedit_file-0.png" title="ingresa aqui ahora" />
+        <figcaption>Portafolio xd mas</figcaption>
+      </figure>
+
+      <figure class="cambio-Fondo">
+        <img src="icons/display_properties-4.png" title="ingresa aqui ahora" />
+        <figcaption>Cambio Fondo</figcaption>
+      </figure>
+    </div>
+
+    <div id="desktop" class="desktop">
+      <div class="title-bar" id="barra-arrastrable">
+        <div class="title-bar-text" id="Windows-title"></div>
+        <button id="btn-cerrar">
+          <img src="icons/descarga.png" alt="" class="icons-barra-superiror" />
+        </button>
+      </div>
+
+      <div class="main-content">
+        <sidebar class="navigation">
+          <div
+            class="title-bar"
+            style="
+              color: black;
+              background-color: #cfcece;
+              border-left: 2px solid #dddddd;
+              border-bottom: 1px solid #333333;
+              border-right: 1px solid #333333;
+            "
+          >
+            Navigation
+          </div>
+          <ul>
+            <details class="tree-details">
+              <summary>
+                <img
+                  src="icons/directory_open_file_mydocs-0.png"
+                  class="icons-navigation"
+                /><span>Proyectos</span>
+              </summary>
+
+              <ul>
+                <li class="nav-link" data-target="proyecto1">
+                  <img
+                    src="icons/executable_script-1.png"
+                    class="icons-navigation-sub"
+                  /><span class="text">Specter-Web</span>
+                </li>
+
+                <li class="nav-link">
+                  <img
+                    src="icons/executable_script-1.png"
+                    class="icons-navigation-sub"
+                  /><span class="text">Reseñas-Popeyes</span>
+                </li>
+              </ul>
+            </details>
+
+            <li class="nav-link">
+              <img
+                src="icons/package-1.png"
+                style="margin-left: 12px"
+                class="icons-navigation"
+              />Habilidades
+            </li>
+            <li class="nav-link" data-target="acerca_de_mi">
+              <img
+                src="icons/notepad-1.png"
+                style="margin-left: 12px"
+                class="icons-navigation"
+              />Sobre-mi
+            </li>
+          </ul>
+          <!--<video
+            src="videos/grok-video-e9123355-de99-416f-8e70-f7f18467461c.mp4"
+            autoplay
+            loop
+            muted
+          ></video>-->
+        </sidebar>
+
+        <div class="windows" id="MainWindow">
+          <div class="windows_body" id="dynamic-content">
+            Contenido de la ventana...
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="taskbar">
+      <button class="start-button" onclick="apagarTV()">
+        <img src="icons/windows-0.png" alt="" />
+        <label>Inicio</label>
+      </button>
+    </div>
+  </body>
+</html>

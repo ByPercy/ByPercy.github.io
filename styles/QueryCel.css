@@ -1,0 +1,183 @@
+/* Cuando la pantalla sea de 500px o menos */
+@media screen and (max-width: 500px) {
+  #desktop {
+    width: 100% !important; /* Ocupa todo el ancho */
+    height: calc(100vh - 40px) !important; /* Todo el alto menos la taskbar */
+    top: 0 !important; /* Pegado arriba */
+    left: 0 !important; /* Pegado a la izquierda */
+    border: none !important; /* Quitamos bordes para ganar espacio */
+  }
+
+  .windows {
+    max-width: 100% !important; /* Liberamos el ancho interno */
+    min-width: 100% !important;
+  }
+
+  .main-content {
+    flex-direction: column; /* El sidebar se pone arriba del contenido */
+    overflow-y: auto;
+  }
+
+  .navigation {
+    width: 100%; /* El sidebar ahora ocupa todo el ancho */
+    border-right: none;
+    border-bottom: 2px inset #333333;
+    height: auto;
+  }
+
+  #dynamic-content {
+    height: auto; /* Que crezca según el contenido */
+    padding: 8px; /* Un poco menos de espacio para aprovechar la pantalla */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tabs {
+    /* Quitamos el absolute para que fluya con el contenido del modal */
+    position: relative !important;
+    width: 100% !important;
+    z-index: 20;
+  }
+
+  .tabs ul {
+    /* IMPORTANTE: Cambiamos fixed por sticky o relative */
+    position: relative !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 5px 10px !important;
+
+    /* Activamos el scroll horizontal si hay muchas pestañas */
+    display: flex !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+
+    /* Estética retro */
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+  }
+
+  /* Ocultar la barra de scroll para que se vea más limpio (opcional) */
+  .tabs ul::-webkit-scrollbar {
+    height: 0px;
+  }
+
+  .tabs li {
+    /* Evitamos que las pestañas se encojan */
+    flex: 0 0 auto !important;
+    margin: 0 5px 0 0 !important;
+    padding: 6px 15px !important;
+    height: auto !important;
+  }
+
+  /* Ajustamos la línea decorativa inferior */
+  .tabs ul::after {
+    width: 100% !important;
+    left: 0 !important;
+  }
+
+  /* Ajuste para el estado seleccionado en móvil */
+  .tabs li:hover,
+  .tabs li.is-selected {
+    margin-top: 0 !important; /* Evitamos saltos bruscos en móvil */
+    transform: translateY(-2px); /* Un efecto más sutil */
+    border-bottom: none !important;
+  }
+  /* 1. REESTRUCTURACIÓN TOTAL DEL CONTENEDOR */
+  .container-text {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-areas: none !important; /* Anulamos el mapa de escritorio */
+    grid-template-columns: 1fr !important; /* Una sola columna si decidiera seguir siendo grid */
+    margin: 0 !important;
+    padding: 10px !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* 2. RESET DE ÁREAS (Hacemos que todos se comporten igual) */
+  #Header-Info,
+  #TextPS1,
+  #ImagenPS1,
+  #TextPS2,
+  .Icon-Acompañante,
+  #Text-Proceso,
+  #Diagrama-Bloque,
+  #Galeria,
+  #Desarroladores {
+    grid-area: auto !important; /* Ignoran su posición en el mapa anterior */
+    width: 100% !important;
+    margin-left: 0 !important; /* Eliminamos los márgenes negativos */
+    position: static !important;
+  }
+
+  /* 3. AJUSTES ESPECÍFICOS DE ELEMENTOS */
+
+  /* La imagen principal */
+  #ImagenPS1 {
+    width: 100% !important;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  /* El gato (Acompañante) */
+  .Icon-Acompañante img {
+    width: 80px !important; /* Tamaño fijo para que no sea gigante */
+    height: auto !important;
+    margin: 10px auto !important; /* Centrado */
+    display: block;
+  }
+
+  /* Diagramas y Galerías */
+  #Diagrama-Bloque h2,
+  #Galeria h2,
+  #Desarroladores h2 {
+    margin: 0 auto 15px auto !important;
+    width: 90% !important;
+    text-align: center;
+    margin-left: 0 !important;
+  }
+
+  #Diagrama-Bloque img {
+    margin-top: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Filas de la galería (de horizontales a verticales) */
+  .arriba,
+  .medio,
+  .abajo {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .arriba img,
+  .medio img,
+  .abajo img {
+    width: 100% !important;
+  }
+
+  /* Botones de interacción */
+  .Interaccion-Botones {
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+  }
+
+  .Interaccion-Botones button {
+    width: 100% !important;
+    height: 45px !important; /* Más grande para el dedo */
+  }
+
+  /* Pestañas (Tabs) */
+  .tabs ul {
+    width: 100% !important;
+    margin: 0 !important;
+    position: relative !important;
+    overflow-x: auto !important; /* Scroll lateral si hay muchas */
+    display: flex !important;
+    padding: 10px 5px !important;
+  }
+}
