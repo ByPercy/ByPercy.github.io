@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       })
       .catch((error) => {
-        contentArea.innerHTML = `<h2>TRABAJANDO EN ESTA SECCIÓN</h2><p>El archivo ${pageName}.html aun no esta listo.</p>`;
+        contentArea.innerHTML = `<h2>TRABAJANDO EN ESTA SECCIÓN</h2><p>El archivo ${pageName}.html aun no esta listo.</p>
+        <img src="../gif/PcRetro.gif" alt="En construcción" style="width: 98%; image-rendering: pixelated; margin-bottom: 20px;"> `;
       });
   };
 
