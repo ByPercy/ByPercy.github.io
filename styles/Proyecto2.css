@@ -93,10 +93,9 @@
 #ImagenPS1 {
   grid-area: imagen;
   width: 82%;
-  height: auto;
+  height: 200vh;
   border-radius: 8px;
   margin-left: 50px;
-  margin-top: 125px;
 }
 #TextPS2 {
   grid-area: boton;
