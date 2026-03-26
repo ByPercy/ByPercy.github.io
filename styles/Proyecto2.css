@@ -84,17 +84,19 @@
 #TextPS1 {
   grid-area: texto;
   padding: 10px;
-  background-color: #939fb5;
+  background-color: #62b1f5;
   box-shadow: inset 5px -5px #4e4e4e46;
-  width: 100%;
+  width: 130%;
   margin: 0;
   font-size: 19px;
 }
 #ImagenPS1 {
   grid-area: imagen;
-  width: 80%;
+  width: 82%;
   height: auto;
   border-radius: 8px;
+  margin-left: 50px;
+  margin-top: 125px;
 }
 #TextPS2 {
   grid-area: boton;
@@ -139,7 +141,7 @@
 }
 #Text-Proceso {
   grid-area: proceso;
-  background-color: #9dafd1;
+  background-color: #7bf7e0;
   box-shadow: inset 5px -5px #4e4e4e46;
 
   width: 100%;
