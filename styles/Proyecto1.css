@@ -260,15 +260,18 @@
 }
 
 .arriba img {
-  width: 90%;
+  width: 33%;
+  max-width: 90%;
 }
 
 .medio img {
-  width: 90%;
+  width: 50%;
+  max-width: 90%;
 }
 
 .abajo img {
-  width: 90%;
+  width: 50%;
+  max-width: 90%;
 }
 
 #Desarroladores {
