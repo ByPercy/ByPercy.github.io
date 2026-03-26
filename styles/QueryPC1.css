@@ -27,6 +27,21 @@
     max-width: 1200px; /* Limitamos el ancho total para que no se vea "gigante" */
   }
 
+  .Interaccion-Botones button {
+    width: 190px !important;
+    height: 30px;
+    background-color: #adadad;
+    border-top: 2px solid #e9e9e9;
+    border-left: 2px solid #e9e9e9;
+    border-bottom: 2px solid #797979;
+    border-right: 2px solid #797979;
+    cursor: pointer;
+  }
+
+  .Interaccion-Botones a {
+    padding: 6px 50px !important;
+  }
+
   /* 3. IMAGEN PRINCIPAL: Tamaño contenido */
   #ImagenPS1 {
     grid-area: imagen;
@@ -63,7 +78,10 @@
   }
 
   /* 6. GALERÍA: Imágenes pequeñas y alineadas */
-  .arriba,
+  .arriba {
+    width: 86%;
+  }
+
   .medio,
   .abajo {
     display: flex !important;
@@ -81,15 +99,16 @@
 
   /* 7. GATO Y PROCESO */
   .Icon-Acompañante img {
-    width: 80px !important;
-    height: auto !important;
-    margin: 0 !important;
+    width: 70px !important;
+    height: 50px !important;
+    margin-top: -30px !important;
   }
 
   #Text-Proceso {
     font-size: 14px !important;
     padding: 8px !important;
     margin: 0 !important;
+    margin-bottom: 30px !important;
   }
 
   /* 8. DESARROLLADORES: Perfiles pequeños */
