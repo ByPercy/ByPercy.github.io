@@ -1,9 +1,13 @@
 * {
-  box-sizing: border-box; /* El padding y borde se quedan DENTRO del tamaño */
+  /* El padding y borde se quedan DENTRO del tamaño */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/*///////////////////*/
+/*////ESCRITORIO////*/
+/*/////////////////*/
 body {
   justify-content: center;
   align-items: center;
@@ -46,6 +50,9 @@ body img {
   cursor: pointer;
 }
 
+/*///////////////////////////*/
+/*///VENTANA DE CONTENIDO///*/
+/*/////////////////////////*/
 #desktop {
   width: 69%;
   height: 83vh;
@@ -54,16 +61,13 @@ body img {
   flex-direction: row;
   background-color: #bdbdbd;
   display: flex;
-  flex-direction: column; /* Alinea los hijos verticalmente */
-  position: absolute; /* O fixed */
-  z-index: 10;
-  /* Evita que se salga de la pantalla al inicio */
+  flex-direction: column; /*--> Alinea los hijos verticalmente */
+  position: absolute;
+  z-index: 10; /*->SE SOBREPONE ANTE LOS DEMAS CONTENIDOS*/
   top: 50px;
   left: 50px;
-  /* Importante para que no se deforme al moverla */
   margin: 0;
   display: none;
-
   border-left: 3px solid #e7e7e7;
   border-top: 2px solid #e7e7e7;
   border-bottom: 3px solid #333333;
@@ -72,27 +76,21 @@ body img {
 
 .windows {
   background-color: #c0c0c0;
-  /*box-shadow:
-    inset 1px 1px 0 #fff,
-    2px 2px 0 #808080,
-    inset -1px -1px 0 #808080;*/
   max-width: 86%;
   min-width: 86%;
   display: flex;
 }
 
 .main-content {
-  display: flex; /* Esto pone el sidebar y la ventana lado a lado */
-  /* Esto hace que ocupe todo el espacio sobrante entre el header y el taskbar */
-  gap: 5px; /* Espacio entre sidebar y ventana */
+  display: flex;
+  gap: 5px; /* ->Espacio entre sidebar y ventana */
   padding: 5px;
 }
 
 #dynamic-content {
-  height: 77vh;
-  /* Ajusta esta altura según el tamaño de tu ventana */
-  overflow-y: auto; /* "auto" hace que el scroll aparezca solo si es necesario */
-  overflow-x: hidden; /* Evita el scroll horizontal si no lo necesitas */
+  height: 77vh; /* ->Ajusta esta altura según el tamaño de tu ventana */
+  overflow-y: auto; /*->AUTO aparce el scroll solo si es necesario*/
+  overflow-x: hidden;
   scrollbar-width: none;
   background-color: #d1cfcf;
   border-top: 2px inset #333333;
@@ -130,12 +128,12 @@ body img {
 
 .linea-dinamica {
   position: absolute;
-  left: 100%; /* Empieza justo donde termina el li */
-  bottom: -3px; /* Ajusta para que se alinee con tu borde inferior */
+  left: 100%;
+  bottom: -3px;
   height: 3px; /* Grosor de la línea */
-  background-color: #4e4e4e; /* El color que elegiste */
-  border-bottom: 1px solid #ffffff; /* El brillo retro */
-  pointer-events: none; /* Evita que la línea interfiera con clics */
+  background-color: #4e4e4e;
+  border-bottom: 1px solid #ffffff;
+  pointer-events: none;
   z-index: 5;
 }
 
@@ -149,7 +147,6 @@ body img {
   justify-content: space-between;
   align-items: center;
   cursor: grab;
-  /* Asegura que la barra tenga espacio para ser clicada */
   min-height: 35px;
   user-select: none;
 }
@@ -226,8 +223,8 @@ body img {
 }
 
 .nav-link {
-  display: flex; /* Activa el modo flexible */
-  align-items: flex-start; /* Alinea el icono con la primera línea de texto */
+  display: flex;
+  align-items: flex-start;
   list-style: none;
 }
 
@@ -271,8 +268,8 @@ body img {
   border-left: 2px solid #e9e9e9;
   font-family: "Courier New";
   display: flex;
-  align-items: center; /* Centra verticalmente el contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /*->Centra verticalmente el contenido */
+  justify-content: center; /*->Centra horizontalmente el contenido */
   gap: 4px;
   background: transparent;
 }
